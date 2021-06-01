@@ -17,12 +17,11 @@ function App() {
   }, [])
 
   const games = useSelector(state => state.boardGames)
-  console.log(games)
+
   const gameImages = games.map(game => {
     return (
-      <div className='games'>
+      <div className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}}>
         <header className='game-header'>{game.name}</header>
-        <img src={game.image_url} alt={game.name} key={game.id} />
         <footer className='game-footer'>
           <p>${game.msrp}</p>
         </footer>

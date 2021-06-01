@@ -1,8 +1,54 @@
-.games {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.game {
+  width: 100%;
+  min-width: 13em;
+  max-width: 18em;
+  height: 30em;
+  margin: 0 0.5em;
+  background-size: contain;
+  background-attachment: initial;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-grid;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 3px 6px black;
+  color: white;
+  border-radius: 8px;
+  position:inherit;
 }
 
-.games img {
-  width: 150px;
+.game:hover {
+  cursor: pointer;
+}
+
+.game-header {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.83);
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 2em 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: opacity 0.2s ease-in;
+}
+
+.card-footer {
+  opacity: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.83);
+  display: flex;
+  justify-content: space-around;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: opacity 0.2s ease-in;
+}
+
+.card:hover .card-header {
+  opacity: 1;
+}
+
+.card:hover .card-footer {
+  opacity: 1;
 }
