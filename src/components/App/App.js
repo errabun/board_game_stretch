@@ -21,8 +21,11 @@ function App() {
   const gameImages = games.map(game => {
     return (
       <div className='games'>
+        <header className='game-header'>{game.name}</header>
         <img src={game.image_url} alt={game.name} key={game.id} />
-        <button>Add to Wishlist</button>
+        <footer className='game-footer'>
+          <p>${game.msrp}</p>
+        </footer>
       </div>
     )
   })
