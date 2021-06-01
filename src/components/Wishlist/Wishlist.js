@@ -11,7 +11,7 @@ class Wishlist extends Component {
 
   render() {
     return (
-      <p>This is where the wishlist games will go</p>
+      <p>This is where the games will go</p>
     )
   }
 }
