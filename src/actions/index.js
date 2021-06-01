@@ -1,6 +1,6 @@
 export const removeWish = (id) => {
     return {
-        type: 'REMOVEWISH',
+        type: 'REMOVE_WISH',
         payload: {
             id
         }
@@ -9,7 +9,7 @@ export const removeWish = (id) => {
 
 export const addWish = (game) => {
     return {
-        type: "ADDWISH",
+        type: "ADD_WISH",
         payload: {
             game
         }
@@ -18,7 +18,7 @@ export const addWish = (game) => {
 
 export const addGames = (games) => {
     return {
-        type: "ADDGAME",
+        type: "ADD_GAME",
         payload: {
             games
         }

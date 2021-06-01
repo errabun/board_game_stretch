@@ -1,8 +1,8 @@
 const wishListReducer = (state = [], action) => {
     switch(action.type) {
-        case 'ADDWISH':
+        case 'ADD_WISH':
             return [...state, action.payload.game]
-        case "REMOVEWISH": {
+        case "REMOVE_WISH": {
             return state.filter(game => game.id !== action.payloag.id)
         }
         default:
