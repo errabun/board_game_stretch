@@ -1,4 +1,4 @@
-const wishListReducer = (state = [], action) {
+const wishListReducer = (state = [], action) => {
     switch(action.type) {
         case 'ADD':
             return [...state, action.payload.game]
