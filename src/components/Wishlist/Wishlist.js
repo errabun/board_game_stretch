@@ -1,19 +1,12 @@
 import './Wishlist.css'
-import { Component } from 'react'
+import { Component } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addWish, removeWish } from '../../actions/index';
 
-class Wishlist extends Component {
-  constructor() {
-    super()
-    this.state= {
-      wishGames: []
-    }
-  }
-
-  render() {
+function Wishlist() {
     return (
       <p>This is where the games will go</p>
     )
-  }
 }
 
 export default Wishlist
