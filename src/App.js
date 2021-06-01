@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import Wishlist from '../Wishlist/Wishlist'
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
+import { useSelector, useDispatch } from 'react-redux';
 
 class App extends Component {
   constructor() {
