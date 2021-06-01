@@ -1,4 +1,4 @@
-const boardGae = (state = [], action) => {
+const boardGameReducer = (state = [], action) => {
     switch(action.type) {
         case "ADDGAMES": 
             return [...state, action.payload.games]
@@ -6,3 +6,5 @@ const boardGae = (state = [], action) => {
             return state;
     }
 }
+
+export default boardGameReducer;
