@@ -10,6 +10,8 @@ function Wishlist() {
   const wishCards = wishList.map(wish => {
     return (
       <WishCard 
+        key={wish.id}
+        id={wish.id}
         title={wish.name}
         price={wish.price}
         img={wish.images.thumb}
