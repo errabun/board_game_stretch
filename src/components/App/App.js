@@ -20,7 +20,7 @@ function App() {
           dispatch(addWish(data.games[i]))
         }
       })
-    
+      .catch((error) => console.log(error));
   }, []) 
 
     return (
