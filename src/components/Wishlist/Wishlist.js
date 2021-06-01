@@ -5,7 +5,7 @@ import { addWish, removeWish } from '../../actions/index';
 import WishCard from '../WishCard/WishCard';
 
 function Wishlist() {
-let formatter = new Intl.NumberFormat('en-US', {
+const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
 });
@@ -24,7 +24,6 @@ let formatter = new Intl.NumberFormat('en-US', {
   const total = wishList.reduce((acc, wish) => {
 
     const price = parseFloat(wish.price)
-    console.log(acc + price);
     return acc + price
   }, 0)
 
