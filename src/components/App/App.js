@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom'
 import './App.css';
 import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { addGames } from '../../actions/index';
+import { addGames } from '../../actions';
 
 function App() {
   const dispatch = useDispatch();
@@ -14,15 +14,29 @@ function App() {
   useEffect(() => {
     getGames()
       .then(data => dispatch(addGames(data.games)))
-  }) 
+  }, [])
 
+  const games = useSelector(state => state.boardGames)
+  console.log(games)
+  const gameImages = games.map(game => {
     return (
-      <main>
-        <Header />
-        <Wishlist />
-        <Footer />
-      </main>
+      <div className='games'>
+        <img src={game.image_url} alt={game.name} key={game.id} />
+        <button>Add to Wishlist</button>
+      </div>
     )
+  })
+
+  return (
+    <main>
+      <Header />
+      <section>
+        {gameImages}
+      </section>
+      <Wishlist />
+      <Footer />
+    </main>
+  )
 
 }
 
