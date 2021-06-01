@@ -57,3 +57,8 @@
   overflow: scroll;
   max-height: 250px;
 }
+
+.price {
+  color: crimson;
+  text-decoration: underline;
+}

@@ -26,7 +26,7 @@ function App() {
           <p className='description'>{game.description_preview}</p>
         </header>
         <footer className='game-footer'>
-          <p>${game.price}</p>
+          <p className='price'><em>${game.price}</em></p>
           <button>Add to wishlist</button>
         </footer>
       </div>
