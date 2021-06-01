@@ -3,14 +3,21 @@ import './WishCard.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeWish } from '../../actions/index';
 
-function WishCard({title, price, img, id}) {
+function WishCard({title, price, img, id, rank}) {
     const dispatch = useDispatch();
     return (
         <div className="wish_card">
-            <p>{title}</p>
-            <p>{price}</p>
+            <div className="spacing">
             <img className="wish_img" src={img} />
-            <button onClick={() => dispatch(removeWish(id))}>-</button>
+                <div>
+                <p className="title wish_text">{title}</p>
+                <p className="wish_text">Rank: {rank}</p>
+                </div>
+            </div>
+            <div>
+                <p className="wish_text">{price}</p>
+            </div>
+            <button className="remove_button" onClick={() => dispatch(removeWish(id))}>Remove from WishList</button>
         </div>
     )
 }

@@ -15,6 +15,7 @@ function Wishlist() {
         title={wish.name}
         price={wish.price}
         img={wish.images.small}
+        rank={wish.rank}
       />)
   })
 

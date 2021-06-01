@@ -1,12 +1,30 @@
 .wish_card {
     display: flex;
+    justify-content: space-around;
+    border-bottom: darkgray solid;
+    margin-top: 20px;
+}
+
+.spacing {
+    display: flex;
+    justify-content: space-around;
 }
 
 .wish_img {
-    width: 3.5em;
-    height: 3.5em;
+    width: 10em;
+    height: 10em;
 }
 
-p {
-    padding: 10px 10px;
+.remove_button {
+    height: 2em;
+    margin-top: 10px;
+}
+
+.title {
+    color: rgb(56, 55, 55);
+    font-weight: bold;
+}
+
+.wish_text {
+    padding: 10px 20px 0 0;
 }
