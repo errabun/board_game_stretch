@@ -16,7 +16,7 @@ function App() {
     getGames()
       .then(data => {
         dispatch(addGames(data.games))
-        for(let i = 0; i < 5; i++){
+        for(let i = 0; i < 6; i++){
           dispatch(addWish(data.games[i]))
         }
       })
