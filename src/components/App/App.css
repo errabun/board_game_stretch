@@ -3,13 +3,12 @@
   min-width: 13em;
   max-width: 18em;
   height: 30em;
-  margin: 0 0.5em;
+  margin: 0.8em 0.8em;
   background-size: contain;
-  background-attachment: initial;
   background-repeat: no-repeat;
   background-position: center center;
   display: inline-grid;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   box-shadow: 2px 3px 6px black;
@@ -25,7 +24,8 @@
 .game-header {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.83);
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   text-align: center;
   padding: 2em 0;
@@ -34,7 +34,7 @@
   transition: opacity 0.2s ease-in;
 }
 
-.card-footer {
+.game-footer {
   opacity: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.83);
@@ -45,10 +45,15 @@
   transition: opacity 0.2s ease-in;
 }
 
-.card:hover .card-header {
+.game:hover .game-header {
   opacity: 1;
 }
 
-.card:hover .card-footer {
+.game:hover .game-footer {
   opacity: 1;
+}
+
+.description {
+  overflow: scroll;
+  max-height: 250px;
 }
