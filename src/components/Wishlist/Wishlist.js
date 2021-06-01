@@ -1,11 +1,25 @@
 import './Wishlist.css'
-import { Component } from 'react';
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { addWish, removeWish } from '../../actions/index';
+import WishCard from '../WishCard/WishCard';
 
 function Wishlist() {
+
+  const wishList = useSelector(state => state.wishList);
+  const wishCards = wishList.map(wish => {
     return (
-      <p>This is where the games will go</p>
+      <WishCard 
+        title={wish.name}
+        price={wish.price}
+        img={wish.images.thumb}
+      />)
+  })
+
+    return (
+      <div>
+        {wishCards}
+      </div>
     )
 }
 
