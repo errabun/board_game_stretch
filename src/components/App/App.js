@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom'
 import './App.css';
 import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { addGames } from '../../actions';
+import { addGames, addWish } from '../../actions';
 
 function App() {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ function App() {
         </header>
         <footer className='game-footer'>
           <p className='price'><em>${game.price}</em></p>
-          <button>Add to wishlist</button>
+          <button onClick={() => dispatch(addWish(game.id))}>Add to wishlist</button>
         </footer>
       </div>
     )
