@@ -14,7 +14,7 @@ function Wishlist() {
         id={wish.id}
         title={wish.name}
         price={wish.price}
-        img={wish.images.thumb}
+        img={wish.images.small}
       />)
   })
 

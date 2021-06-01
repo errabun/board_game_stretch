@@ -6,10 +6,10 @@ import { removeWish } from '../../actions/index';
 function WishCard({title, price, img, id}) {
     const dispatch = useDispatch();
     return (
-        <div>
+        <div className="wish_card">
             <p>{title}</p>
             <p>{price}</p>
-            <img src={img} />
+            <img className="wish_img" src={img} />
             <button onClick={() => dispatch(removeWish(id))}>-</button>
         </div>
     )

@@ -1,0 +1,12 @@
+.wish_card {
+    display: flex;
+}
+
+.wish_img {
+    width: 3.5em;
+    height: 3.5em;
+}
+
+p {
+    padding: 10px 10px;
+}
