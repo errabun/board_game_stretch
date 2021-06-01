@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     getGames()
       .then(data => dispatch(addGames(data.games)))
-  }) 
+  }, []) 
 
     return (
       <main>
