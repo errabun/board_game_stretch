@@ -18,7 +18,7 @@ export const addWish = (game) => {
 
 export const addGames = (games) => {
     return {
-        type: "ADD_GAME",
+        type: "ADD_GAMES",
         payload: {
             games
         }
