@@ -3,12 +3,12 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Wishlist from '../Wishlist/Wishlist';
 import Dashboard from '../Dashboard/Dashboard';
+import GameDetails from '../GameDetails/GameDetails';
 import './App.css';
 import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { addGames, addWish } from '../../actions';
 import {Route, Link, Switch, Redirect } from 'react-router-dom';
-
 
 
 function App() {
@@ -37,6 +37,10 @@ function App() {
           <Route exact
             path='/wishlist'
             component={Wishlist}
+          />
+          <Route exact
+            path='/:id'
+            component={GameDetails}
           />
           <Redirect to='/' />
         </Switch>
