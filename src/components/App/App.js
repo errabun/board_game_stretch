@@ -49,7 +49,7 @@ function App() {
       <section>
         {gameImages}
       </section>
-      <Wishlist />
+      {/* <Wishlist /> */}
       <GameDetails />
       <Footer />
     </main>

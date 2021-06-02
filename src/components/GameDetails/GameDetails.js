@@ -3,23 +3,36 @@ import './GameDetails.css';
 import { useSelector } from 'react-redux';
 
 function GameDetails() {
-  // const games = useSelector(state => state.wishList);
-  // const sampleGame = games[0]
+  const game = useSelector(state => state.gameDetails);
+  console.log(game)
   return(
     <div className='game-details'>
-      
-        <img src="https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254183526-51f6ysXCMmL.jpg"/>
-        <div>
-          <h1>Codename</h1>
-          <p>Price $13.49</p>
-          <button>Add to wish list</button>
-        </div>
-      <p>designers and devs info</p>
-      <p>information</p>
- 
-
+        <img src={game.thumb_url}/>
+        <h1>{game.name}</h1>
+        <p>{game.price}</p>
+        {/* <button>Add to wish list</button> */}
+      {/* <p>{game.designers}{game.developers}</p>
+      <p>{game.description_preview}</p> */}
     </div>
   )
 }
 
 export default GameDetails;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
