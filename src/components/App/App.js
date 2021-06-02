@@ -56,6 +56,7 @@ function App() {
             path='/wishlist'
             component={Wishlist}
           />
+          <Redirect to='/' />
         </Switch>
       </section>
       <Footer />
