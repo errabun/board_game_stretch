@@ -1,12 +1,12 @@
-/* * {
-  border: 1px solid red
-} */
+* {
+  /* border: 1px solid red */
+}
 
 @media screen and (min-device-width: 320px) {
   .game-details {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 30em 30em;
+    grid-template-rows: 30em 30em; */
   }
 
   img {
