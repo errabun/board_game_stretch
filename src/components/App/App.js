@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
-import Wishlist from '../Wishlist/Wishlist'
+import React, { useEffect } from 'react';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import Wishlist from '../Wishlist/Wishlist';
+import Dashboard from '../Dashboard/Dashboard';
 import './App.css';
 import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
@@ -49,8 +50,11 @@ function App() {
         <Switch>
           <Route exact
             path='/'
+            component={Dashboard}
+          />
+          <Route exact
+            path='/wishlist'
             component={Wishlist}
-            // {gameImages}
           />
         </Switch>
       </section>
