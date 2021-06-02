@@ -1,8 +1,10 @@
 import React from 'react';
 import './GameDetails.css'; 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addWish } from '../../actions';
 
 function GameDetails() {
+  const dispatch = useDispatch();
   const game = useSelector(state => state.gameDetails);
 
   return(
@@ -10,7 +12,7 @@ function GameDetails() {
         <img src={game.thumb_url}/>
         <h1>{game.name}</h1>
         <p>{game.price}</p>
-        <button>Add to wish list</button>
+        <button onClick={() => dispatch(addWish(game))}>Add to wish list</button>
       {/* <p>{game.designers}{game.developers}</p> */}
       <p>{game.description_preview}</p>
     </div>
