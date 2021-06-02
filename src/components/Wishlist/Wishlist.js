@@ -1,19 +1,41 @@
 import './Wishlist.css'
-import { Component } from 'react'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { addWish, removeWish } from '../../actions/index';
+import WishCard from '../WishCard/WishCard';
 
-class Wishlist extends Component {
-  constructor() {
-    super()
-    this.state= {
-      wishGames: []
-    }
-  }
-
-  render() {
+function Wishlist() {
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
+  const wishList = useSelector(state => state.wishList);
+  const wishCards = wishList.map(wish => {
     return (
-      <p>This is where the games will go</p>
+      <WishCard 
+        key={wish.id}
+        id={wish.id}
+        title={wish.name}
+        price={wish.price}
+        img={wish.images.small}
+        rank={wish.rank}
+      />)
+  })
+  const total = wishList.reduce((acc, wish) => {
+
+    const price = parseFloat(wish.price)
+    return acc + price
+  }, 0)
+
+    return (
+      <div>
+        {wishCards}
+        <div>
+          <p>Total price of WishList: {formatter.format(total)}</p>
+        </div>
+      </div>
+ 
     )
-  }
 }
 
 export default Wishlist

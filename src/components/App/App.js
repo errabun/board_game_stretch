@@ -8,13 +8,22 @@ import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { addGames, addWish } from '../../actions';
 
+
+
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     getGames()
-      .then(data => dispatch(addGames(data.games)))
-  }, [])
+      .then(data => {
+        dispatch(addGames(data.games))
+        for(let i = 0; i < 6; i++){
+          dispatch(addWish(data.games[i]))
+        }
+      })
+      .catch((error) => console.log(error));
+  }, []) 
+
 
   const games = useSelector(state => state.boardGames)
 
