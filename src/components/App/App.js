@@ -17,12 +17,9 @@ function App() {
     getGames()
       .then(data => {
         dispatch(addGames(data.games))
-        for(let i = 0; i < 6; i++){
-          dispatch(addWish(data.games[i]))
-        }
       })
       .catch((error) => console.log(error));
-  }, []) 
+  }, [])
 
 
   const games = useSelector(state => state.boardGames)
@@ -36,7 +33,7 @@ function App() {
         </header>
         <footer className='game-footer'>
           <p className='price'><em>${game.price}</em></p>
-          <button onClick={() => dispatch(addWish(game.id))}>Add to wishlist</button>
+          <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
         </footer>
       </div>
     )
