@@ -2,11 +2,12 @@ import React, { useEffect } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Wishlist from '../Wishlist/Wishlist'
+import GameDetails from '../GameDetails/GameDetails';
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
-import { getGames } from '../../apiCalls.js';
+import { getGames } from '../../reducers/apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { addGames, addWish } from '../../actions';
+import { addGames, addWish, selectGame } from '../../actions';
 
 
 
@@ -29,7 +30,7 @@ function App() {
 
   const gameImages = games.map(game => {
     return (
-      <div className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}}>
+      <div className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}} onClick={() => dispatch(selectGame(game))}>
         <header className='game-header'>
           <h1>{game.name}</h1>
           <p className='description'>{game.description_preview}</p>
@@ -49,6 +50,7 @@ function App() {
         {gameImages}
       </section>
       <Wishlist />
+      <GameDetails />
       <Footer />
     </main>
   )
