@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Wishlist from '../Wishlist/Wishlist'
-import { Switch, Route } from 'react-router-dom'
 import './App.css';
 import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { addGames, addWish } from '../../actions';
+import {Route, Link, Switch, Redirect } from 'react-router-dom';
 
 
 
@@ -29,7 +29,7 @@ function App() {
 
   const gameImages = games.map(game => {
     return (
-      <div className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}}>
+      <Link to={`/games:${game.id}`} className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}}>
         <header className='game-header'>
           <h1>{game.name}</h1>
           <p className='description'>{game.description_preview}</p>
@@ -38,7 +38,7 @@ function App() {
           <p className='price'><em>${game.price}</em></p>
           <button onClick={() => dispatch(addWish(game.id))}>Add to wishlist</button>
         </footer>
-      </div>
+      </Link>
     )
   })
 
@@ -46,9 +46,14 @@ function App() {
     <main>
       <Header />
       <section>
-        {gameImages}
+        <Switch>
+          <Route exact
+            path='/'
+            component={Wishlist}
+            // {gameImages}
+          />
+        </Switch>
       </section>
-      <Wishlist />
       <Footer />
     </main>
   )
