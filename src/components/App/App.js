@@ -38,12 +38,10 @@ function App() {
             path='/wishlist'
             component={Wishlist}
           />
-
           <Route exact
             path='/:id'
             component={GameDetails}
           />
-
           <Redirect to='/' />
         </Switch>
       </section>
