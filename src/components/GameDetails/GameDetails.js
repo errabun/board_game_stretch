@@ -9,6 +9,7 @@ function GameDetails({id}) {
   const state = useSelector(state => state.boardGames);
   useEffect(() => {
       setGame(state.find(game => game.id === id));
+
   }, [state])
 
   return(
@@ -18,7 +19,7 @@ function GameDetails({id}) {
           <h1>{game.name}</h1>
           <p>{game.price}</p>
           <button>Add to wish list</button>
-        {/* <p>{game.designers}{game.developers}</p> */}
+        {/* <p>{game.primary_publisher.name)}</p> */}
         <p>{game.description_preview}</p>
       </div>}
     </div>
