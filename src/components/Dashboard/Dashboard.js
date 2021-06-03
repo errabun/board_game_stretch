@@ -11,7 +11,7 @@ function Dashboard() {
 
     const gameImages = games.map(game => {
     return (
-        <Link to={`/games:${game.id}`} className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}} onClick={() => dispatch(selectGame(game))}>
+        <Link to={`/games/${game.id}`} className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}} onClick={() => dispatch(selectGame(game))}>
         <header className='game-header'>
             <h1>{game.name}</h1>
             <p className='description'>{game.description_preview}</p>

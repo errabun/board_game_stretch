@@ -39,8 +39,11 @@ function App() {
             component={Wishlist}
           />
           <Route exact
-            path='/:id'
-            component={GameDetails}
+            path='/games/:id'
+            render ={({match}) => {
+              const {id} = match.params
+              return <GameDetails id={id}/>
+            }}
           />
           <Redirect to='/' />
         </Switch>
