@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import './GameDetails.css'; 
 import { useSelector, useDispatch } from 'react-redux';
 import { addWish, addVideos } from '../../actions';
@@ -7,16 +7,17 @@ import { getVideo } from '../../apiCalls.js';
 function GameDetails() {
   const dispatch = useDispatch(); 
   const game = useSelector(state => state.gameDetails);
-  const videoUrl = useSelector(state => state.gameVideos[0].url)
-  console.log(videoUrl)
-  const videoKey = videoUrl.split("?v=")[1];
-  console.log(videoKey)
-  // const embedlink = "http://www.youtube.com/embed/" + videoID;
+  const [video, setVideo] = useState('');
+  let videoKey;
+
+  console.log(video)
 
   useEffect(() => {
     getVideo(game.id)
       .then(data => { 
-        dispatch(addVideos(data.videos))
+        console.log(data.videos[0].url)
+        videoKey = data.videos[0].url.split("?v=")[1];
+        setVideo(videoKey)
       })
       .catch((error) => console.log(error));
   },[])
@@ -30,7 +31,8 @@ function GameDetails() {
       {/* <p>{game.designers}{game.developers}</p> */}
       <p>{game.description_preview}</p>
       <iframe
-        src={`https://www.youtube-nocookie.com/embed/${videoKey}`}
+        // src={`https://www.youtube-nocookie.com/embed/${videoKey}`}
+        src="https://www.youtube-nocookie.com/embed/Dfq4dRPHIAM"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -42,14 +44,6 @@ function GameDetails() {
 }
 
 export default GameDetails;
-
-// Game's designers/develoipers >> "Objects are not valid as a React child" >> to render a collection of children use array instead? 
-
-
-
-
-
-
 
 
 
