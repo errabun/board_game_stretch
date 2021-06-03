@@ -7,17 +7,16 @@ import { getVideo } from '../../apiCalls.js';
 function GameDetails() {
   const dispatch = useDispatch(); 
   const game = useSelector(state => state.gameDetails);
-  const videos = useSelector(state => state.gameVideo)
+  const videos = useSelector(state => state.gameVideos)
   console.log(videos)
 
   useEffect(() => {
     getVideo(game.id)
       .then(data => { 
-        console.log(data.videos)
         dispatch(addVideos(data.videos))
       })
       .catch((error) => console.log(error));
-  })
+  },[])
 
   return(
     <div className='game-details'>
