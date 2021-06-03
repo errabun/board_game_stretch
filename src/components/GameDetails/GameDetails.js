@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './GameDetails.css'; 
 import { useSelector } from 'react-redux';
+import rootReducer from '../../reducers'
+import { createStore } from 'redux';
 
-function GameDetails() {
-  const game = useSelector(state => state.gameDetails);
+function GameDetails({id}) {
+  const [game, setGame] = useState({});
+  const state = useSelector(state => state.boardGames);
+  useEffect(() => {
+      setGame(state.find(game => game.id === id));
+  }, [])
 
   return(
     <div className='game-details'>
