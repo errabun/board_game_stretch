@@ -7,12 +7,12 @@ import { getVideo } from '../../apiCalls.js';
 function GameDetails({id}) {
   const dispatch = useDispatch(); 
   const [game, setGame] = useState({});
+  const [videoKey, setVideo] = useState('');
   const state = useSelector(state => state.boardGames);
   useEffect(() => {
       setGame(state.find(game => game.id === id));
   }, [state])
   
-  const [videoKey, setVideo] = useState('');
  
 
   useEffect(() => {
@@ -25,32 +25,31 @@ function GameDetails({id}) {
       .catch((error) => console.log(error));
   },[])
 
-console.log(videoKey)
   return(
     <div>{game !== undefined &&     
-        <div className='game-details'>
-          <header>
-            <img src={game.thumb_url}/>
+      <div className='game-details'>
+        <header>
+          <img src={game.thumb_url}/>
+          <section className='right-header'>
             <h1>{game.name}</h1>
-          </header>
-          <p>${game.price}</p>
-          <button onClick={() => dispatch(addWish(game))}>Add to wish list</button>
+            <p className='cost'>${game.price}</p>
+            <button onClick={() => dispatch(addWish(game))}>Add to wish list</button>
+          </section>
+        </header>
         {/* <p>{game.primary_publisher.name)}</p> */}
-        <p>{game.description_preview}</p>
-      {videoKey && (
-        <iframe
-        src={`https://www.youtube-nocookie.com/embed/${videoKey}`}
-        // src="https://www.youtube-nocookie.com/embed/Dfq4dRPHIAM"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded youtube"
-        seamless
-        />
-
-      )}
-      </div>}
-    </div>
+        {videoKey && (
+          <iframe
+          src={`https://www.youtube-nocookie.com/embed/${videoKey}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
+          seamless
+          />
+          )}
+        <p className='description'>{game.description_preview}</p>
+      </div>
+    }</div>
   )
 }
 

@@ -4,14 +4,17 @@
 
 @media screen and (min-device-width: 320px) {
   .game-details {
-    /* /* display: grid; */
+    /* display: grid; 
     grid-template-columns: 1fr;
-    grid-template-rows: 3em 3em; 
+    grid-template-rows: 3em 3em;  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   header {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
   }
 
@@ -22,6 +25,19 @@
 
   h1 {
     font-size: 3.5em;
+  }
+
+  .cost {
+    font-size: 20px;
+    margin: 0 0 5px 25px;
+  }
+  button {
+    padding: 5px;
+    margin-left: 13px;
+  }
+  
+  .description {
+    width: 19em;
   }
 }
 
