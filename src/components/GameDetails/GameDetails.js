@@ -7,8 +7,11 @@ import { getVideo } from '../../apiCalls.js';
 function GameDetails() {
   const dispatch = useDispatch(); 
   const game = useSelector(state => state.gameDetails);
-  const videos = useSelector(state => state.gameVideos)
-  console.log(videos)
+  const videoUrl = useSelector(state => state.gameVideos[0].url)
+  console.log(videoUrl)
+  const videoKey = videoUrl.split("?v=")[1];
+  console.log(videoKey)
+  // const embedlink = "http://www.youtube.com/embed/" + videoID;
 
   useEffect(() => {
     getVideo(game.id)
@@ -26,6 +29,14 @@ function GameDetails() {
         <button onClick={() => dispatch(addWish(game))}>Add to wish list</button>
       {/* <p>{game.designers}{game.developers}</p> */}
       <p>{game.description_preview}</p>
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${videoKey}`}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Embedded youtube"
+        seamless
+        />
     </div>
   )
 }
