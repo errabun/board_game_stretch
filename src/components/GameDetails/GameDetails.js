@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './GameDetails.css'; 
 import { useSelector, useDispatch } from 'react-redux';
-import { addWish } from '../../actions';
+import { addWish, addVideos } from '../../actions';
+import { getVideo } from '../../apiCalls.js';
 
 function GameDetails() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
   const game = useSelector(state => state.gameDetails);
+  const videos = useSelector(state => state.gameVideo)
+  console.log(videos)
+
+  useEffect(() => {
+    getVideo(game.id)
+      .then(data => { 
+        console.log(data.videos)
+        dispatch(addVideos(data.videos))
+      })
+      .catch((error) => console.log(error));
+  })
 
   return(
     <div className='game-details'>
