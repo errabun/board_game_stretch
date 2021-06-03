@@ -39,7 +39,7 @@ function App() {
             component={Wishlist}
           />
           <Route exact
-            path='/:id'
+            path='/games:id'
             component={GameDetails}
           />
           <Redirect to='/' />
