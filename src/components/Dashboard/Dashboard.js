@@ -18,7 +18,7 @@ function Dashboard() {
         </header>
         <footer className='game-footer'>
             <p className='price'><em>${game.price}</em></p>
-            <button onClick={() => dispatch(addWish(game.id))}>Add to wishlist</button>
+            <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
         </footer>
         </Link>
     )

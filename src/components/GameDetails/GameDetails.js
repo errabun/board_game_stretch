@@ -21,7 +21,7 @@ function GameDetails({id}) {
           <img src={game.thumb_url}/>
           <h1>{game.name}</h1>
           <p>{game.price}</p>
-          <button onClick={() => dispatch(addWish(game.id))}>Add to wish list</button>
+          <button onClick={() => dispatch(addWish(game))}>Add to wish list</button>
         {/* <p>{game.primary_publisher.name)}</p> */}
         <p>{game.description_preview}</p>
       </div>}
