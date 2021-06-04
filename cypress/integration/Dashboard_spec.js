@@ -51,6 +51,14 @@ describe('Dashboard', () => {
 
   it('Should have a button to add the game to the wishlist', () => {
 
-    cy.get('button').should('have.text', 'Add to wishlist')
+    cy.get('button').should('have.text', 'Add to wishlist').click({force: true})
+      .get('.wishlist_title').click()
+      .get('.title').should('have.text', 'Root')
+  })
+
+  it('Should be able to click on the game and be redirected to the game details', () => {
+
+    cy.get('.game').click()
+      .url().should('include', 'games/TAAifFP590')
   })
 })

@@ -26,7 +26,7 @@ function GameDetails({id}) {
     <div>{game !== undefined &&
       <div className='game-details'>
         <header>
-          <img src={game.thumb_url}/>
+          <img className='game-img' src={game.thumb_url}/>
           <section className='header-right'>
             <h1>{game.name}</h1>
             <span className='cost'>${game.price}</span>

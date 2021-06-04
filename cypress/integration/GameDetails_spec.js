@@ -27,15 +27,37 @@ describe('GameDetails', () => {
             "large": "https://cdn.shopify.com/s/files/1/0513/4077/1515/products/root-board-game.jpg?v=1611089915",
             "original": "https://cdn.shopify.com/s/files/1/0513/4077/1515/products/root-board-game.jpg?v=1611089915"
           },
+          "primary_publisher": {
+            "id": "jyc9bV7f9D",
+            "name": "Leder Games",
+            "url": "https://www.boardgameatlas.com/publisher/jyc9bV7f9D/leder-games"
+          },
+            "primary_designer": {
+            "id": "DJCmDFXmsh",
+            "name": "Cole Wehrle",
+            "url": "https://www.boardgameatlas.com/designer/DJCmDFXmsh/cole-wehrle"
+          },
           "description_preview": " Find adventure in this marvelous asymmetric game. Root provides limitless replay value as you and your friends explore the unique factions all wanting to rule a fantastic forest kingdom. Play as the Marquise de Cat and dominate the woods, extracting its riches and policing its inhabitants, as the Woodland Alliance, gathering supporters and coordinate revolts against the ruling regime, the Eyrie Dynasties, regaining control of the woods while keeping your squabbling court at bay, or as the Vagabond, seeking fame and fortune as you forge alliances and rivalries with the other players. Each faction has its own play style and paths to victory, providing an immersive game experience you will want to play again and again. "
         }
       ]
     })
-      .visit('http://localhost:3000/')
+      cy.visit('http://localhost:3000/')
+        .get('.game').click()
   })
 
-  it('Should display an image of the game', () => {
+  it('Should display the image of the game after it is selected on the dashboard', () => {
 
-    cy.get()
+    cy.get('.game-img').should('have.attr', 'src')
+  })
+
+  it('Should display a description of the game', () => {
+
+    cy.get('.game-description').should('include.text', 'Find adventure')
+  })
+
+  it('Should be able to click an Add to wishlist button to add game to wishlist', () => {
+
+    cy.get('button').should('have.text', 'Add to wish list').click()
+      
   })
 })
