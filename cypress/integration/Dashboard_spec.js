@@ -31,25 +31,6 @@ describe('App', () => {
         }
       ]
     })
-      .visit('http://localhost:3000/')
-  })
-
-  it('Should display a header with a title of the app', () => {
-
-    cy.get('nav').contains('Board Game Blitz')
-  })
-
-  it('Should have a link in the header to the wishlist of the current user and redirects user when clicked', () => {
-
-    cy.get('nav').contains('Wishlist').click()
-      .get('p').contains('Total price of WishList')
-      .url().should('include', 'wishlist')
-  })
-
-  it('Should redirect a user back to the homepage if the title link is clicked', () => {
-
-    cy.get('nav').contains('Wishlist').click()
-      .get('nav').contains('Board Game Blitz').click()
-      .url().should('include', 'http://localhost:3000/')
+      cy.visit('http://localhost:3000/')
   })
 })

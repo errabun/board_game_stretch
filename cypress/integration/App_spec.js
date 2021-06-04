@@ -31,11 +31,11 @@ describe('App', () => {
         }
       ]
     })
+      cy.visit('http://localhost:3000/')
   })
 
   it('Should fetch games when page is loaded', () => {
 
-    cy.visit('http://localhost:3000/')
-      .get('header').contains('Root')
+    cy.get('header').should('contain', 'Root')
   })
 })
