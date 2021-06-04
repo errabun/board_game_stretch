@@ -12,7 +12,7 @@ function Dashboard() {
   const gameImages = games.map(game => {
     return (
         <section className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}}>
-            <Link to={`/games/${game.id}`}  onClick={() => dispatch(selectGame(game))}>
+            <Link to={`/games/${game.id}`}>
             <section className='game-hover'>
                 <h1>{game.name}</h1>
                 <div className="card_spacing">
@@ -30,7 +30,7 @@ function Dashboard() {
                 <p className='price'><em>${game.price}</em></p>
             </section>
             </Link>
-            <button onClick={() => dispatch(addWish(game.id))}>Add to wishlist</button>
+            <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
         </section>
     )
   })
