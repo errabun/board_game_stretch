@@ -4,22 +4,96 @@
 
 @media screen and (min-device-width: 320px) {
   .game-details {
-    /* display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 30em 30em; */
+    /* display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em 3em;  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0 10px 0;
+  }
+  
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
   }
 
   img {
-    height: 5em;
-    width: 5em;
+    height: 11em;
+    width: 10em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .cost {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 5px;
+    margin-left: 13px;
+  }
+  
+  .game-description {
+    width: 19em;
   }
 }
 
 @media screen and (min-width: 321px) {}
 
-@media screen and (min-width: 750px) {}
+@media screen and (min-width: 750px) { 
+  .header-right {
+    width: 21em;
+  }
 
-@media screen and (min-width: 900px) {}
+  img {
+    height: 15em;
+    width: 15em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .cost {
+    font-size: 30px;
+  }
+  
+  button {
+    padding: 8px;
+    margin-left: 13px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  iframe {
+    width: 35em;
+    height: 20em;
+  }
+
+  .game-description {
+    width: 25em;
+    font-size: 22px;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  .game-description {
+    width: 33em;
+    margin-top: 0;
+  }
+}
 
 @media screen and (min-width: 1300px) {}
 
