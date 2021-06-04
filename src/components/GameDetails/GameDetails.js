@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import './GameDetails.css'; 
 import { useSelector, useDispatch } from 'react-redux';
-import { addWish, addVideos } from '../../actions';
+import { addWish} from '../../actions';
 import { getVideo } from '../../apiCalls.js';
 
 function GameDetails({id}) {
@@ -17,8 +17,6 @@ function GameDetails({id}) {
   useEffect(() => {
     getVideo(id)
       .then(data => { 
-        console.log(data)
-        console.log(data.videos[0].url)
         setVideo(data.videos[0].url.split("?v=")[1])
       })
       .catch((error) => console.log(error));
@@ -36,7 +34,7 @@ function GameDetails({id}) {
           </section>
         </header>
         {/* <p>{game.primary_publisher.name)}</p> */}
-        <p className='description'>{game.description_preview}</p>
+        <p className='game-description'>{game.description_preview}</p>
         {videoKey && (
           <iframe
           src={`https://www.youtube-nocookie.com/embed/${videoKey}`}
