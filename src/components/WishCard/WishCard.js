@@ -15,7 +15,7 @@ function WishCard({title, price, img, id, rank}) {
                 </div>
             </div>
             <div>
-                <p className="wish_text">{price}</p>
+                <p className="price wish_text">{price}</p>
             </div>
             <button className="remove_button" onClick={() => dispatch(removeWish(id))}>Remove from WishList</button>
         </div>

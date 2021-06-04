@@ -12,7 +12,7 @@ const formatter = new Intl.NumberFormat('en-US', {
   const wishList = useSelector(state => state.wishList);
   const wishCards = wishList.map(wish => {
     return (
-      <WishCard 
+      <WishCard
         key={wish.id}
         id={wish.id}
         title={wish.name}
@@ -31,10 +31,10 @@ const formatter = new Intl.NumberFormat('en-US', {
       <div>
         {wishCards}
         <div>
-          <p>Total price of WishList: {formatter.format(total)}</p>
+          <p className='wish-total'>Total price of WishList: {formatter.format(total)}</p>
         </div>
       </div>
- 
+
     )
 }
 
