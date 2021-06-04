@@ -14,7 +14,8 @@ function Dashboard() {
         <Link to={`/games/${game.id}`} className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}} onClick={() => dispatch(selectGame(game))}>
         <section className='game-header'>
             <h1>{game.name}</h1>
-            <p className='description'>{game.description_preview}</p>
+            <p>{`👥 ${game.min_players}-${game.max_players}`}</p>
+            <p>{`🕐 ${game.min_playtime}-${game.max_playtime}`}</p>
             <p className='price'><em>${game.price}</em></p>
             <button onClick={() => dispatch(addWish(game.id))}>Add to wishlist</button>
         </section>
