@@ -22,8 +22,6 @@ function GameDetails({id}) {
       .catch((error) => console.log(error));
   },[]);
 
-  const dispatch = useDispatch()
-
   return(
     <div>{game !== undefined &&
       <div className='game-details'>
@@ -52,19 +50,4 @@ function GameDetails({id}) {
   )
 }
 
-<<<<<<< HEAD
 export default GameDetails;
-
-// Game's designers/develoipers >> "Objects are not valid as a React child" >> to render a collection of children use array instead?
-=======
-
-export default GameDetails;
-
-
-
-
-
-
-
-
->>>>>>> 6213c45364a943f5e5d203e6e15d6546752f6cb2
