@@ -2,7 +2,7 @@ import './Dashboard.css';
 import React, { useEffect } from 'react'
 import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { addGames, addWish} from '../../actions';
+import { addGames, addWish, selectGame } from '../../actions';
 import {Link, Redirect } from 'react-router-dom';
 
 function Dashboard() {
