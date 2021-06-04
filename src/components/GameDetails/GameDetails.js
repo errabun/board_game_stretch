@@ -9,12 +9,11 @@ function GameDetails({id}) {
   const [game, setGame] = useState({});
   const [videoKey, setVideo] = useState('');
   const state = useSelector(state => state.boardGames);
+  
   useEffect(() => {
       setGame(state.find(game => game.id === id));
-  }, [state])
+  }, [state]);
   
- 
-
   useEffect(() => {
     getVideo(id)
       .then(data => { 
@@ -23,20 +22,21 @@ function GameDetails({id}) {
         setVideo(data.videos[0].url.split("?v=")[1])
       })
       .catch((error) => console.log(error));
-  },[])
+  },[]);
 
   return(
     <div>{game !== undefined &&     
       <div className='game-details'>
         <header>
           <img src={game.thumb_url}/>
-          <section className='right-header'>
+          <section className='header-right'>
             <h1>{game.name}</h1>
-            <p className='cost'>${game.price}</p>
+            <span className='cost'>${game.price}</span>
             <button onClick={() => dispatch(addWish(game))}>Add to wish list</button>
           </section>
         </header>
         {/* <p>{game.primary_publisher.name)}</p> */}
+        <p className='description'>{game.description_preview}</p>
         {videoKey && (
           <iframe
           src={`https://www.youtube-nocookie.com/embed/${videoKey}`}
@@ -47,7 +47,6 @@ function GameDetails({id}) {
           seamless
           />
           )}
-        <p className='description'>{game.description_preview}</p>
       </div>
     }</div>
   )
