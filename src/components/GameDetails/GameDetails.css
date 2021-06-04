@@ -53,12 +53,12 @@
 
 @media screen and (min-width: 750px) { 
   .header-right {
-    margin-left: 20px;
+    width: 21em;
   }
 
   img {
-    height: 13em;
-    width: 13em;
+    height: 15em;
+    width: 15em;
   }
 
   h1 {
@@ -72,22 +72,29 @@
   button {
     padding: 8px;
     margin-left: 13px;
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 10px;
   }
   
   iframe {
-    width: 27em;
-    height: 15em;
+    width: 35em;
+    height: 20em;
   }
 
   .description {
-    width: 19em;
+    width: 25em;
+    font-size: 22px;
   }
 
 }
 
-@media screen and (min-width: 900px) {}
+@media screen and (min-width: 900px) {
+  .description {
+    width: 33em;
+    max-height: none;
+    margin-top: 0;
+  }
+}
 
 @media screen and (min-width: 1300px) {}
 
