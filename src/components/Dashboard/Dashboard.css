@@ -19,13 +19,14 @@
   color: white;
   border-radius: 8px;
   position:inherit;
+
 }
 
 .game:hover {
   cursor: pointer;
 }
 
-.game-header {
+.game-hover {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.83);
   display: flex;
@@ -39,11 +40,22 @@
   height: 80%;
 }
 
-.game:hover .game-header {
+.card_spacing {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 15% 0;
+}
+
+.game:hover .game-hover {
   opacity: .9;
 }
 
 .price {
   color: crimson;
   text-decoration: underline;
+}
+
+button {
+    margin-left: 30%;
 }
