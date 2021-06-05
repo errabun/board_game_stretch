@@ -1,8 +1,8 @@
 import './Dashboard.css';
-import React, { useEffect } from 'react'
-import { getGames } from '../../apiCalls.js';
+// import React, { useEffect } from 'react'
+// import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { addGames, addWish} from '../../actions';
+import { addGames, addWish, selectGame} from '../../actions';
 import {Link, Redirect } from 'react-router-dom';
 
 function Dashboard() {
@@ -30,7 +30,7 @@ function Dashboard() {
                 <p className='price'><em>${game.price}</em></p>
             </section>
             </Link>
-            <button onClick={() => dispatch(addWish(game.id))}>Add to wishlist</button>
+            <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
         </section>
     )
   })

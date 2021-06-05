@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 10px;
+  background: #2f5d62;
 }
 
 .game {
@@ -18,8 +19,8 @@
   box-shadow: 2px 3px 6px black;
   color: white;
   border-radius: 8px;
-  position:inherit;
-
+  /* position:inherit; */
+  background-color: #ffb037;
 }
 
 .game:hover {
