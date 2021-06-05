@@ -1,62 +1,75 @@
-.dashboard {
-  justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 10px;
-  background: #2f5d62;
-}
+@media screen and (min-device-width: 320px) {
+  .dashboard {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1 1fr);
+    gap: 10px;
+    background: #2f5d62;
+  }
 
-.game {
-  width: 92%;
-  height: 21em;
-  margin: 0.8em 0.8em;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 2px 3px 6px black;
-  color: white;
-  border-radius: 8px;
-  /* position:inherit; */
-  background-color: #ffb037;
-}
+  .game {
+    width: 92%;
+    height: 21em;
+    margin: 0.8em 0.8em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 3px 6px black;
+    color: white;
+    border-radius: 8px;
+    background-color: #ffb037;
+  }
 
-.game:hover {
-  cursor: pointer;
-}
+  .game:hover {
+    cursor: pointer;
+  }
 
-.game-hover {
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.83);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  padding: 2em 0;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  transition: opacity 0.5s ease-in;
-  height: 80%;
-}
-
-.card_spacing {
-    width: 100%;
+  .game-hover {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.83);
     display: flex;
-    justify-content: space-around;
-    margin: 5% 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: opacity 0.5s ease-in;
+    height: 80%;
+  }
+
+  .card_spacing {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin: 5% 0;
+  }
+
+  .game:hover .game-hover {
+    opacity: .9;
+  }
+
+  .price {
+    color: crimson;
+    text-decoration: underline;
+  }
+
+  button {
+      margin-left: 30%;
+  }
 }
 
-.game:hover .game-hover {
-  opacity: .9;
+
+@media screen and (min-width: 750px) {
+  .dashboard {
+    grid-template-columns: repeat(4,1fr);
+  }
+
 }
 
-.price {
-  color: crimson;
-  text-decoration: underline;
-}
+@media screen and (min-width: 1300px) {}
 
-button {
-    margin-left: 30%;
-}
+@media screen and (min-width: 1600px) {}

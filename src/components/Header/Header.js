@@ -4,9 +4,11 @@ import { Route, NavLink, Link } from 'react-router-dom'
 const Header = () => {
   return (
     <nav className="nav-bar">
-      <Link className="header_title" to='/'><i class="fas fa-home"></i></Link>
-      <header className='home-header'>🎲  Board Game Blitz </header>
-      <Link className="wishlist_title" to='/wishlist'>Wishlist</Link>
+      <Link className="wishlist_title" to='/wishlist'><i className="far fa-heart"></i>Wishlist</Link>
+      <div>
+        <Link to='/'><i className="fas fa-home"></i></Link>
+        <a className='game-title'>Board <span className='die'>🎲 </span> Game <span className='die'>🎲 </span> Blitz </a>
+      </div>
     </nav>
   )
 }
