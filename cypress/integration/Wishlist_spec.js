@@ -45,4 +45,9 @@ describe('Wishlist', () => {
         .get('button').should('have.text', 'Add to wishlist').click({force: true})
         .get('.wishlist_title').click()
   })
+
+  it('Should show a running total of all the games in the wishlist', () => {
+
+    cy.get('.wish-total').should('have.text', 'Total price of WishList: $104.98')
+  })
 })
