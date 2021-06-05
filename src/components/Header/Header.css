@@ -1,9 +1,6 @@
 @media screen and (min-device-width: 320px) {
   .nav-bar {
     display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    justify-content: center;
     align-items: center;
     height: 5em;
     background: #2f5d62;
@@ -12,16 +9,21 @@
   
   .fa-heart {
     font-size: 12px;
-    padding-right: 3px;
   }
 
   .wishlist_title {
     font-size: 15px;
-    margin-left: 16em;
-    margin-bottom: 13px;
     color: white;
     font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6em;
   }
+
+  /* .game-header {
+
+  } */
 
   .fa-home {
     color: white;

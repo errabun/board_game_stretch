@@ -7,20 +7,19 @@
     background: #2f5d62;
   }
 
+
   .game {
-    width: 92%;
+    width: 92%; 
     height: 21em;
     margin: 0.8em 0.8em;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 2px 3px 6px black;
-    color: white;
     border-radius: 8px;
     background-color: #ffb037;
+    background-size: 15em;
+    width: 17em;
   }
 
   .game:hover {
@@ -66,6 +65,12 @@
 @media screen and (min-width: 750px) {
   .dashboard {
     grid-template-columns: repeat(4,1fr);
+  }
+
+  .game {
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
   }
 
 }
