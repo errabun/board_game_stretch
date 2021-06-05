@@ -28,7 +28,7 @@ function GameDetails({id}) {
         <header>
           <img src={game.thumb_url}/>
           <section className='header-right'>
-            <h1>{game.name}</h1>
+            <h1 className='game-details-title'>{game.name}</h1>
             <span className='cost'>${game.price}</span>
             <button onClick={() => dispatch(addWish(game))}>Add to wish list</button>
           </section>

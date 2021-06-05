@@ -12,25 +12,30 @@ function Dashboard() {
   const gameImages = games.map(game => {
     return (
         <section className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}}>
-            <Link to={`/games/${game.id}`}  onClick={() => dispatch(selectGame(game))}>
+            <Link to={`/games/${game.id}`}  onClick={() => dispatch(selectGame(game))} className='to-details-page'>
             <section className='game-hover'>
-                <h1>{game.name}</h1>
-                <div className="card_spacing">
+                <h1 className='card-name'>{game.name}</h1>
+                <div className="card-spacing">
                     <div>
-                        <p>{`👥 ${game.min_players}-${game.max_players}`}</p>
-                        <p>{`🕐 ${game.min_playtime}-${game.max_playtime}`}</p>
+                        <p className='detail'>{`👥 ${game.min_players}-${game.max_players}`}</p>
+                        <p className='detail'>{`🕐 ${game.min_playtime}-${game.max_playtime}`}</p>
                     </div>
                     <div>
-                        <p>{`Year Published: ${game.year_published}`}</p>
-                        <p>{`Min Age: ${game.min_age}`}</p>
+                        <p className='detail published'><i class="far fa-calendar-alt"></i>
+                        {`Published: ${game.year_published}`}</p>
+                        <p className='detail age'><i class="fas fa-child"></i>
+                        {`Min Age: ${game.min_age}`}</p>
                     </div>
                 </div>
-                <p>{`P: ${game.primary_publisher.name}`}</p>
-                <p>{`D: ${game.primary_designer.name}`}</p>
-                <p className='price'><em>${game.price}</em></p>
+                <div className='bottom-details'>
+                    <p className='bottom-label'>Publisher & Designer</p>
+                    <p className='detail publisher'>{`P: ${game.primary_publisher.name}`}</p>
+                    <p className='detail'>{`D: ${game.primary_designer.name}`}</p>
+                </div>
+                <p className='detail price'><em>${game.price}</em></p>
             </section>
             </Link>
-            <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
+            <button className='card-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
         </section>
     )
   })

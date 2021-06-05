@@ -10,9 +10,14 @@
     color: white;
     font-size: 9px;
   }
-
-  a {
-    color: white;
-    font-size: 9px;
-  }
 }
+
+@media screen and (min-width: 321px) {}
+
+@media screen and (min-width: 750px) {}
+
+@media screen and (min-width: 900px) {}
+
+@media screen and (min-width: 1300px) {}
+
+@media screen and (min-width: 1600px) {}

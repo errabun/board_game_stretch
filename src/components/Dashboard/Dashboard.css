@@ -1,4 +1,13 @@
 @media screen and (min-device-width: 320px) {
+  a {
+    color: white;
+    font-size: 9px;
+  }
+  
+  .to-details-page {
+    text-decoration: none;
+  }
+
   .dashboard {
     justify-content: center;
     display: grid;
@@ -7,9 +16,7 @@
     background: #2f5d62;
   }
 
-
   .game {
-    width: 92%; 
     height: 21em;
     margin: 0.8em 0.8em;
     background-size: contain;
@@ -18,46 +25,81 @@
     box-shadow: 2px 3px 6px black;
     border-radius: 8px;
     background-color: #ffb037;
-    background-size: 15em;
+    background-size: 14em;
     width: 17em;
+    position:inherit;
   }
 
   .game:hover {
     cursor: pointer;
-  }
-
-  .game-hover {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.83);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 2em 0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    transition: opacity 0.5s ease-in;
-    height: 80%;
-  }
-
-  .card_spacing {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      margin: 5% 0;
+    color: chartreuse;
   }
 
   .game:hover .game-hover {
     opacity: .9;
   }
 
-  .price {
-    color: crimson;
-    text-decoration: underline;
+  .game-hover {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.83);
+    text-align: center;
+    padding: 2em 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: opacity 0.5s ease-in;
+    height: 30.12em;
   }
 
-  button {
-      margin-left: 30%;
+  .card-name {
+    font-size: 3em;
+    margin: 0 0 13px 0;
+  }
+
+  .card-spacing {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .detail {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .published,
+  .age {
+    margin-top: 5px;
+  }
+
+  .fa-calendar-alt,
+  .fa-child {
+    padding-right: 5px;
+  }
+
+  .bottom-details {
+    border: 1px solid white;
+    margin-top: 15px;
+    padding: 12px 0;
+  }
+
+  .bottom-label {
+    font-size: 20px;
+    margin: 0 0 5px 0;
+    text-decoration: underline;
+  }
+  
+  .publisher {
+    margin-bottom: 2px;
+  }
+
+  .price {
+    color: crimson;
+    font-size: 25px;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+
+  .card-button {
+    margin-left: 7em;
   }
 }
 
