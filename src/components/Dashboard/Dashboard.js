@@ -2,7 +2,7 @@ import './Dashboard.css';
 // import React, { useEffect } from 'react'
 // import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { addGames, addWish, selectGame} from '../../actions';
+import { addGames, addWish, removeWish} from '../../actions';
 import {Link, Redirect } from 'react-router-dom';
 
 function Dashboard() {
@@ -12,7 +12,7 @@ function Dashboard() {
   const gameImages = games.map(game => {
     return (
         <section className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}}>
-            <Link to={`/games/${game.id}`}  onClick={() => dispatch(selectGame(game))} className='to-details-page'>
+            <Link to={`/games/${game.id}`}>
             <section className='game-hover'>
                 <h1 className='card-name'>{game.name}</h1>
                 <div className="card-spacing">
@@ -35,7 +35,9 @@ function Dashboard() {
                 <p className='detail price'><em>${game.price}</em></p>
             </section>
             </Link>
-            <button className='card-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
+            {!game.isWished ? 
+                <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button> 
+                : game.isWished && <button onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>}
         </section>
     )
   })
