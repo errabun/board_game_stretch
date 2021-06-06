@@ -19,15 +19,14 @@
   .game {
     height: 21em;
     margin: 0.8em 0.8em;
-    background-size: contain;
+    /* background-size: contain; */
     background-repeat: no-repeat;
     background-position: center center;
     box-shadow: 2px 3px 6px black;
     border-radius: 8px;
     background-color: #ffb037;
-    background-size: 14em;
-    width: 17em;
-    position:inherit;
+    background-size: 11em;
+    width: 14em;
   }
 
   .game:hover {
@@ -43,11 +42,11 @@
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.83);
     text-align: center;
-    padding: 2em 0;
+    padding: 2em 0; 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     transition: opacity 0.5s ease-in;
-    height: 30.12em;
+    height: 29em;
   }
 
   .card-name {
@@ -77,9 +76,10 @@
 
   .bottom-details {
     border: 1px solid white;
-    margin-top: 15px;
     padding: 12px 0;
-  }
+    width: 22em;
+    margin: 15px 0 0 12px;
+}
 
   .bottom-label {
     font-size: 20px;
@@ -99,20 +99,52 @@
   }
 
   .card-button {
-    margin-left: 7em;
+    margin-left: 5em;
+    border-radius: 10px;
+    border: none;
   }
 }
 
 
 @media screen and (min-width: 750px) {
-  .dashboard {
-    grid-template-columns: repeat(4,1fr);
+  .nav-bar {
+    height: 10em;
   }
 
-  .game {
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
+  .fa-home {
+    margin-right: 50px;
+    font-size: 28px;
+  }
+
+  .game-title {
+    font-size: 69px;
+  }
+
+  .die {
+    font-size: 19px;
+    padding-right: 13px;
+  }
+
+  .dashboard {
+    grid-template-columns: repeat(3,1fr);
+    gap: 0;
+  }
+
+  .card-button {
+    margin-left: 4em;
+    margin-top: 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+  } 
+
+  .wishlist_title {
+    font-size: 19px;
+  }
+
+  .fa-heart {
+    font-size: 18px;
+    padding-right: 4px;
   }
 
 }

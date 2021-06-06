@@ -9,6 +9,8 @@
   
   .fa-heart {
     font-size: 12px;
+    padding-right: 2px;
+    padding-top: 10px;
   }
 
   .wishlist_title {
@@ -21,24 +23,31 @@
     width: 6em;
   }
 
-  /* .game-header {
+  .game-header {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+  }
 
-  } */
+
 
   .fa-home {
     color: white;
     margin-right: 10px;
+    font-size: 15px;
+    margin-left: 5px;
   }
 
   .game-title {
-    font-size: 25px;
+    font-size: 27px;
     color: white;
     font-family: 'Playfair Display', serif;
+    padding-left: 6px;
   }
 
   .die {
-    font-size: 15px;
-    padding-bottom: 5px;
+    font-size: 10px;
+    padding-right: 7px;
   }
 
 }

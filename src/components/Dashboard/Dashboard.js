@@ -21,9 +21,9 @@ function Dashboard() {
                         <p className='detail'>{`🕐 ${game.min_playtime}-${game.max_playtime}`}</p>
                     </div>
                     <div>
-                        <p className='detail published'><i class="far fa-calendar-alt"></i>
+                        <p className='detail published'><i className="far fa-calendar-alt"></i>
                         {`Published: ${game.year_published}`}</p>
-                        <p className='detail age'><i class="fas fa-child"></i>
+                        <p className='detail age'><i className="fas fa-child"></i>
                         {`Min Age: ${game.min_age}`}</p>
                     </div>
                 </div>
