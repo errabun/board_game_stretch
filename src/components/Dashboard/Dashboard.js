@@ -2,7 +2,7 @@ import './Dashboard.css';
 import React, { useEffect } from 'react'
 import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { addGames, addWish, selectGame } from '../../actions';
+import { addGames, addWish, removeWish} from '../../actions';
 import {Link, Redirect } from 'react-router-dom';
 
 function Dashboard() {
@@ -30,7 +30,9 @@ function Dashboard() {
                 <p className='price'><em>${game.price}</em></p>
             </section>
             </Link>
-            <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
+            {console.log(game.isWished)}
+            {!game.isWished && <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button> ?
+            game.isWished && <button onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>}
         </section>
     )
   })
