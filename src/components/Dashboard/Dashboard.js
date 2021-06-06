@@ -31,8 +31,8 @@ function Dashboard() {
             </section>
             </Link>
             {console.log(game.isWished)}
-            {!game.isWished && <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button>}
-            {game.isWished && <button onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>}
+            {!game.isWished && <button onClick={() => dispatch(addWish(game))}>Add to wishlist</button> ?
+            game.isWished && <button onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>}
         </section>
     )
   })
