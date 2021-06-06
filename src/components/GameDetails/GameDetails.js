@@ -1,32 +1,32 @@
 import React, { Component, useEffect, useState } from 'react';
-import './GameDetails.css'; 
+import './GameDetails.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addWish} from '../../actions';
 import { getVideo } from '../../apiCalls.js';
 
 function GameDetails({id}) {
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
   const [game, setGame] = useState({});
   const [videoKey, setVideo] = useState('');
   const state = useSelector(state => state.boardGames);
-  
+
   useEffect(() => {
       setGame(state.find(game => game.id === id));
   }, [state]);
-  
+
   useEffect(() => {
     getVideo(id)
-      .then(data => { 
+      .then(data => {
         setVideo(data.videos[0].url.split("?v=")[1])
       })
       .catch((error) => console.log(error));
   },[]);
 
   return(
-    <div>{game !== undefined &&     
+    <div>{game !== undefined &&
       <div className='game-details'>
         <header>
-          <img src={game.thumb_url}/>
+          <img className='game-img' src={game.thumb_url}/>
           <section className='header-right'>
             <h1>{game.name}</h1>
             <span className='cost'>${game.price}</span>
@@ -50,13 +50,4 @@ function GameDetails({id}) {
   )
 }
 
-
 export default GameDetails;
-
-
-
-
-
-
-
-
