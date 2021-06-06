@@ -32,7 +32,7 @@ describe('Header', () => {
             "name": "Leder Games",
             "url": "https://www.boardgameatlas.com/publisher/jyc9bV7f9D/leder-games"
           },
-            "primary_designer": {
+          "primary_designer": {
             "id": "DJCmDFXmsh",
             "name": "Cole Wehrle",
             "url": "https://www.boardgameatlas.com/designer/DJCmDFXmsh/cole-wehrle"
