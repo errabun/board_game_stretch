@@ -28,9 +28,9 @@ const formatter = new Intl.NumberFormat('en-US', {
   }, 0)
 
     return (
-      <div>
+      <div className='wish-cards-container'>
         {wishCards}
-        <div>
+        <div className='total-container'>
           <p className='wish-total'>Total price of WishList: {formatter.format(total)}</p>
         </div>
       </div>

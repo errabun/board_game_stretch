@@ -3,6 +3,7 @@
     display: flex;
     background: #2f5d62;
     justify-content: space-around;
+    align-items: flex-end;
     width: 20em;
   }
 
