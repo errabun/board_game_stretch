@@ -31,8 +31,8 @@ function GameDetails({id}) {
             <h1 className='game-details-title'>{game.name}</h1>
             <span className='cost'>${game.price}</span>
             {!game.isWished ? 
-                <button className='details-add' onClick={() => dispatch(addWish(game))}>Add to wishlist</button> 
-                : game.isWished && <button className='details-remove' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>
+                <button className='details-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button> 
+                : game.isWished && <button className='details-button' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>
             }
           </section>
         </header>
