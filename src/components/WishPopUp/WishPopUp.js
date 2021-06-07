@@ -7,12 +7,12 @@ function WishPopUp() {
   const showPopUp = useSelector(state => state.showPopUp);
 
 
-    return (
-        <section className="popup">
-            {showPopUp.added && `${game.name} added to your Wish List` }
-            {!showPopUp.added && `Game Removed from Wish List`}
-        </section>
-    )
+  return (
+    <section className="popup">
+      {showPopUp.added && `${game.name} added to your Wish List` }
+      {!showPopUp.added && `Game Removed from Wish List`}
+    </section>
+  )
 }
 
 export default WishPopUp;

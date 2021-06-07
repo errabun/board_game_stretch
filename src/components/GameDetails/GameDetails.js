@@ -11,7 +11,7 @@ function GameDetails({id}) {
   const state = useSelector(state => state.boardGames);
 
   useEffect(() => {
-      setGame(state.find(game => game.id === id));
+    setGame(state.find(game => game.id === id));
   }, [state]);
 
   useEffect(() => {
@@ -31,8 +31,8 @@ function GameDetails({id}) {
             <h1 className='game-details-title'>{game.name}</h1>
             <span className='cost'>${game.price}</span>
             {!game.isWished ?
-                <button className='details-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
-                : game.isWished && <button className='details-button' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>
+              <button className='details-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
+              : game.isWished && <button className='details-button' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>
             }
           </section>
         </header>
@@ -46,7 +46,7 @@ function GameDetails({id}) {
           title="Embedded youtube"
           seamless
           />
-          )}
+        )}
       </div>
     }</div>
   )
