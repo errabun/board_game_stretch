@@ -1,13 +1,11 @@
 import './Dashboard.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addWish, removeWish } from '../../actions';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
   const dispatch = useDispatch()
   const games = useSelector(state => state.boardGames)
-  const location = useLocation()
-  console.log(location)
 
   const gameImages = games.map(game => {
     return (
