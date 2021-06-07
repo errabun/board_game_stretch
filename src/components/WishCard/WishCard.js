@@ -10,13 +10,11 @@ function WishCard({title, price, img, id, rank}) {
             <div className="spacing">
             <img className="wish_img" src={img} />
                 <div>
-                <p className="title wish_text">{title}</p>
-                <p className="wish_text">Rank: {rank}</p>
+                <p className="title wish-text">{title}</p>
+                <p className="wish-text">Rank: {rank}</p>
                 </div>
             </div>
-            <div>
-                <p className="price wish_text">{price}</p>
-            </div>
+            <p className="wish-price">${price}</p>
             <button className="remove_button" onClick={() => dispatch(removeWish(id))}>Remove from WishList</button>
         </div>
     )

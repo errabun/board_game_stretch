@@ -1,61 +1,134 @@
-.dashboard {
-  justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 10px;
-}
+@media screen and (min-device-width: 320px) {
+  a {
+    color: white;
+    font-size: 9px;
+  }
+  
+  .to-details-page {
+    text-decoration: none;
+  }
 
-.game {
-  width: 92%;
-  height: 21em;
-  margin: 0.8em 0.8em;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 2px 3px 6px black;
-  color: white;
-  border-radius: 8px;
-  position:inherit;
+  .dashboard {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1 1fr);
+    gap: 10px;
+    background: #2f5d62;
+  }
 
-}
+  .game {
+    height: 21em;
+    margin: 0.8em 0.8em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 2px 3px 6px black;
+    border-radius: 8px;
+    background-color: #ffb037;
+    background-size: 11em;
+    width: 14em;
+  }
 
-.game:hover {
-  cursor: pointer;
-}
+  .game:hover {
+    cursor: pointer;
+  }
 
-.game-hover {
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.83);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  padding: 2em 0;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  transition: opacity 0.5s ease-in;
-  height: 80%;
-}
+  .game:hover .game-hover {
+    opacity: .9;
+  }
 
-.card_spacing {
-    width: 100%;
+  .game-hover {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.83);
+    text-align: center;
+    padding: 2em 0; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: opacity 0.5s ease-in;
+    height: 29em;
+  }
+
+  .card-name {
+    font-size: 3em;
+    margin: 0 0 13px 0;
+  }
+
+  .card-spacing {
     display: flex;
     justify-content: space-around;
-    margin: 5% 0;
+  }
+
+  .detail {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .time,
+  .published,
+  .age {
+    margin-top: 5px;
+  }
+
+  .fa-calendar-alt,
+  .fa-child {
+    padding-right: 5px;
+  }
+
+  .bottom-details {
+    border: 1px solid white;
+    padding: 12px 0;
+    width: 22em;
+    margin: 15px 0 0 12px;
 }
 
-.game:hover .game-hover {
-  opacity: .9;
+  .bottom-label {
+    font-size: 20px;
+    margin: 0 0 5px 0;
+    text-decoration: underline;
+  }
+  
+  .publisher {
+    margin-bottom: 2px;
+  }
+
+  .price {
+    color: crimson;
+    font-size: 25px;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+
+  .card-button {
+    margin-left: 4.5em;
+    border-radius: 10px;
+    border: none;
+  }
 }
 
-.price {
-  color: crimson;
-  text-decoration: underline;
+@media screen and (min-width: 600px) {
+  .dashboard {
+    grid-template-columns: repeat(2,1fr);
+    gap: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-button {
-    margin-left: 30%;
+@media screen and (min-width: 768px) {
+  .dashboard {
+    grid-template-columns: repeat(3,1fr);
+    gap: 0;
+  }
+
+  .card-button {
+    margin-left: 4em;
+    margin-top: 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+  } 
+
+  .remove {
+    margin-left: 2.4em;
+  }
 }

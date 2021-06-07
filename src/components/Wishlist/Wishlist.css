@@ -1,0 +1,17 @@
+@media screen and (min-device-width: 320px) {
+  .total-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .wish-total {
+    padding-right: 5px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .wish-total {
+    padding-right: 10px;
+    font-size: 25px;
+  }
+}
+

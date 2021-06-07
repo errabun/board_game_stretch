@@ -1,7 +1,6 @@
 import './Wishlist.css'
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { addWish, removeWish } from '../../actions/index';
+// import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux';
 import WishCard from '../WishCard/WishCard';
 
 function Wishlist() {
@@ -28,9 +27,9 @@ const formatter = new Intl.NumberFormat('en-US', {
   }, 0)
 
     return (
-      <div>
+      <div className='wish-cards-container'>
         {wishCards}
-        <div>
+        <div className='total-container'>
           <p className='wish-total'>Total price of WishList: {formatter.format(total)}</p>
         </div>
       </div>
@@ -38,4 +37,4 @@ const formatter = new Intl.NumberFormat('en-US', {
     )
 }
 
-export default Wishlist
+export default Wishlist;

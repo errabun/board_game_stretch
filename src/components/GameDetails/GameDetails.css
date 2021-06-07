@@ -4,9 +4,6 @@
 
 @media screen and (min-device-width: 320px) {
   .game-details {
-    /* display: grid; 
-    grid-template-columns: 1fr;
-    grid-template-rows: 3em 3em;  */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +28,7 @@
     width: 10em;
   }
 
-  h1 {
+  .game-details-title {
     font-size: 1.5em;
   }
 
@@ -44,14 +41,24 @@
     margin-left: 13px;
   }
   
+  .details-button {
+    border-radius: 5px;
+    border: none;
+    background-color: #ffb037;
+    font-size: 10px;
+  }
+  
   .game-description {
     width: 19em;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  
+  iframe {
+    margin-bottom: 1em;
   }
 }
 
-@media screen and (min-width: 321px) {}
-
-@media screen and (min-width: 750px) { 
+@media screen and (min-width: 768px) { 
   .header-right {
     width: 21em;
   }
@@ -61,8 +68,9 @@
     width: 15em;
   }
 
-  h1 {
+  .game-details-title {
     font-size: 3em;
+    margin: 0 0 20px 0;
   }
 
   .cost {
@@ -83,9 +91,12 @@
 
   .game-description {
     width: 25em;
-    font-size: 22px;
+    font-size: 20px;
   }
 
+  .details-button {
+    font-size: 15px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -94,7 +105,3 @@
     margin-top: 0;
   }
 }
-
-@media screen and (min-width: 1300px) {}
-
-@media screen and (min-width: 1600px) {}

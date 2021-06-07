@@ -5,19 +5,19 @@ function Footer() {
   return (
     <footer className='footer-container'>
       <div className='github-link'>
-        <FaGithub />
-        <a href="https://github.com/errabun">Eric Rabun</a>
+        <FaGithub className='gh-icon'/>
+        <a className='contributor' href="https://github.com/errabun">Eric Rabun</a>
       </div>
       <div className='github-link'>
-        <FaGithub />
-        <a href="https://github.com/Ryan-D-Miller">Ryan Miller</a>
+        <FaGithub className='gh-icon'/>
+        <a className='contributor' href="https://github.com/Ryan-D-Miller">Ryan Miller</a>
       </div>
       <div className='github-link'>
-        <FaGithub />
-        <a href="https://github.com/daomeow">Melanie Daoheuang</a>
+        <FaGithub className='gh-icon'/>
+        <a className='contributor' href="https://github.com/daomeow">Melanie Daoheuang</a>
       </div>
     </footer>
   )
 }
 
-export default Footer
+export default Footer;

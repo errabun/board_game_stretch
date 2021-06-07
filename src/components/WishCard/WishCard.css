@@ -1,30 +1,65 @@
-.wish_card {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: darkgray solid;
-    margin-top: 20px;
+@media screen and (min-device-width: 320px) {
+    .wish_card {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: darkgray solid;
+        margin-top: 20px;
+    }
+
+    .spacing {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .wish_img {
+        width: 7em;
+        height: 7em;
+    }
+
+    .remove_button {
+        height: 3em;
+        margin: 40px 5px 0 0;
+        width: 80px;
+        white-space: normal;
+        border-radius: 5px;
+        border: none;
+        background-color: #ffb037;
+        font-size: 10px;
+    }
+
+    .title {
+        color: rgb(56, 55, 55);
+        font-weight: bold;
+    }
+
+    .wish-price {
+        padding: 10px 20px 0 19;
+        font-size: 15px;
+        color: crimson;
+        font-weight: 700;
+    }
+
+
 }
 
-.spacing {
-    display: flex;
-    justify-content: space-around;
-}
+@media screen and (min-width: 768px) {
+    .wish_img {
+        width: 10em;
+        height: 10em;
+    }
 
-.wish_img {
-    width: 10em;
-    height: 10em;
-}
+    .wish-text {
+        font-size: 25px;
+    }
 
-.remove_button {
-    height: 2em;
-    margin-top: 10px;
-}
+    .wish-price {
+        font-size: 30px;
+    }
 
-.title {
-    color: rgb(56, 55, 55);
-    font-weight: bold;
-}
-
-.wish_text {
-    padding: 10px 20px 0 0;
+    .remove_button {
+        height: 3em;
+        width: 12em;
+        margin: 36px 0 0 0;
+        font-size: 15px;
+    }
 }
