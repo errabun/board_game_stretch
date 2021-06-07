@@ -4,12 +4,13 @@ import './WishPopUp.css';
 
 function WishPopUp() {
   const dispatch = useDispatch();
-  const games = useSelector(state => state.boardGames)
+  const game = useSelector(state => state.gameDetails);
+  const showPopUp = useSelector(state => state.showPopUp);
   
 
     return (
         <main>
-            <p>Hello</p>
+            <p>{game.name} was {showPopUp.added} to your Wish List</p>
         </main>
     )
 }

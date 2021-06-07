@@ -27,19 +27,21 @@ function App() {
   const displayDelay = () => {
     setTimeout(() => {
       dispatch(removePopUp());
-    }, 5000);
+    }, 3000);
   }
 
   useEffect(() => {
-    if(showPopUp) {
+    if(showPopUp.show) {
       displayDelay();
     }
   }, [showPopUp])
 
   return (
     <main>
+      {console.log(showPopUp)}
       <Header />
       <section>
+        {showPopUp.show && <WishPopUp />}
         <Switch>
           <Route exact
             path='/'
@@ -59,7 +61,6 @@ function App() {
           <Redirect to='/' />
         </Switch>
       </section>
-      {showPopUp && <WishPopUp />}
       <Footer />
     </main>
   )

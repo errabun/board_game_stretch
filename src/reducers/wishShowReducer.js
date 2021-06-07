@@ -1,11 +1,11 @@
-const wishShowReducer = (state = false, action) => {
+const wishShowReducer = (state = {show: false, added: ''}, action) => {
   switch(action.type) {
     case "ADD_WISH":
-      return true;
+      return {show: true, added: 'added to'};
     case "REMOVE_WISH":
-      return true;
+      return {show: true, added: 'removed from'};
     case "REMOVE_POPUP":
-      return false;
+      return {show: false, added: ''};
     default:
       return state;
   }
