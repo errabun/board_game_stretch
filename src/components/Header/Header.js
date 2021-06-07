@@ -13,7 +13,8 @@ const Header = () => {
           <Link to='/'><i className="fas fa-home"></i></Link>}
         <a className='game-title'>Board <span className='die'>🎲 </span> Game <span className='die'>🎲 </span> Blitz </a>
       </div>
-      <Link className="wishlist_title" to='/wishlist'><i className="far fa-heart"></i>Wishlist</Link>
+      {location.pathname !== '/wishlist' &&
+        <Link className="wishlist_title" to='/wishlist'><i className="far fa-heart"></i>Wishlist</Link>}
     </nav>
   )
 }
