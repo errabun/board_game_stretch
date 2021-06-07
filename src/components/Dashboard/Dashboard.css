@@ -19,7 +19,6 @@
   .game {
     height: 21em;
     margin: 0.8em 0.8em;
-    /* background-size: contain; */
     background-repeat: no-repeat;
     background-position: center center;
     box-shadow: 2px 3px 6px black;
@@ -31,7 +30,6 @@
 
   .game:hover {
     cursor: pointer;
-    color: chartreuse;
   }
 
   .game:hover .game-hover {

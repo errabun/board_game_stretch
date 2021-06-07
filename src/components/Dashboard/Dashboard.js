@@ -8,6 +8,7 @@ import {Link, Redirect } from 'react-router-dom';
 function Dashboard() {
   const dispatch = useDispatch();
   const games = useSelector(state => state.boardGames)
+  
 
   const gameImages = games.map(game => {
     return (

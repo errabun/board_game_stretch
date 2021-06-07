@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import './GameDetails.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { addWish} from '../../actions';
+import { addWish, removeWish } from '../../actions';
 import { getVideo } from '../../apiCalls.js';
 
 function GameDetails({id}) {
@@ -30,10 +30,12 @@ function GameDetails({id}) {
           <section className='header-right'>
             <h1 className='game-details-title'>{game.name}</h1>
             <span className='cost'>${game.price}</span>
-            <button onClick={() => dispatch(addWish(game))}>Add to wish list</button>
+            {!game.isWished ? 
+                <button className='details-add' onClick={() => dispatch(addWish(game))}>Add to wishlist</button> 
+                : game.isWished && <button className='details-remove' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>
+            }
           </section>
         </header>
-        {/* <p>{game.primary_publisher.name)}</p> */}
         <p className='game-description'>{game.description_preview}</p>
         {videoKey && (
           <iframe
