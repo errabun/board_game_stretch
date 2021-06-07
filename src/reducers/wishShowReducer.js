@@ -3,6 +3,8 @@ const wishShowReducer = (state = false, action) => {
     case "ADD_WISH":
       return true;
     case "REMOVE_WISH":
+      return true;
+    case "REMOVE_POPUP":
       return false;
     default:
       return state;

@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
     wishList: wishListReducer,
     boardGames: boardGameReducer,
     gameDetails: gameDetailsReducer,
-    wishShow: wishShowReducer
+    showPopUp: wishShowReducer
 })
 
 export default rootReducer;
