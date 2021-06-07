@@ -1,6 +1,6 @@
 const gameDetailsReducer = (state = {}, action) => {
   switch(action.type) {
-    case "SELECT_GAME":
+    case "ADD_WISH":
       return action.payload.game;
     default:
       return state;
