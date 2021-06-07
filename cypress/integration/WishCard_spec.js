@@ -53,7 +53,7 @@ describe('WishCard', () => {
 
   it('Should display the price for each game', () => {
 
-    cy.get('.price').should('have.text', '104.98')
+    cy.get('.wish-price').should('have.text', '$104.98')
   })
 
   it('Should be able to remove from wishlist by clicking button "Remove from Wishlist"', () => {

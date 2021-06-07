@@ -4,9 +4,8 @@ import { addWish, removeWish } from '../../actions';
 import { Link } from 'react-router-dom';
 
 function Dashboard() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const games = useSelector(state => state.boardGames)
-  
 
   const gameImages = games.map(game => {
     return (
@@ -34,8 +33,8 @@ function Dashboard() {
                 <p className='detail price'><em>${game.price}</em></p>
             </section>
             </Link>
-            {!game.isWished ? 
-                <button className='card-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button> 
+            {!game.isWished ?
+                <button className='card-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
                 : game.isWished && <button className='card-button remove' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>}
         </section>
     )

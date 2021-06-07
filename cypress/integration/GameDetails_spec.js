@@ -57,7 +57,7 @@ describe('GameDetails', () => {
 
   it('Should be able to click an Add to wishlist button to add game to wishlist', () => {
 
-    cy.get('button').should('have.text', 'Add to wish list').click()
+    cy.get('button').should('have.text', 'Add to wishlist').click()
       .get('.wishlist_title').click()
       .get('.title').should('have.text', 'Root')
   })
@@ -73,9 +73,9 @@ describe('GameDetails', () => {
     cy.get('.cost').should('have.text', '$104.98')
   })
 
-  it('Should be redirected back to the dashboard if you click on the page title in the header', () => {
+  it('Should be redirected back to the dashboard if you click on the home icon in the header', () => {
 
-    cy.get('.header_title').should('contain', 'Board Game Blitz').click()
+    cy.get('.fas').click()
       .url().should('equal', 'http://localhost:3000/')
   })
 })

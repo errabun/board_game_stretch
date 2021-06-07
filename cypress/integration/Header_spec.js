@@ -46,7 +46,7 @@ describe('Header', () => {
 
   it('Should display a header with a title of the app', () => {
 
-    cy.get('nav').contains('Board Game Blitz')
+    cy.get('nav').contains('Board 🎲 Game 🎲 Blitz')
   })
 
   it('Should have a link in the header to the wishlist of the current user and redirects user when clicked', () => {
@@ -59,7 +59,7 @@ describe('Header', () => {
   it('Should redirect a user back to the homepage if the title link is clicked', () => {
 
     cy.get('nav').contains('Wishlist').click()
-      .get('nav').contains('Board Game Blitz').click()
+      .get('nav').contains('Board 🎲 Game 🎲 Blitz').click()
       .url().should('include', 'http://localhost:3000/')
   })
 })

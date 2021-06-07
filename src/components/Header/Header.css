@@ -6,7 +6,7 @@
     background: #2f5d62;
     font-family: 'Anton', sans-serif;
   }
-  
+
   .fa-heart {
     font-size: 12px;
     padding-right: 2px;
@@ -70,7 +70,7 @@
 }
 
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
   .wishlist_title {
     font-size: 19px;
   }
