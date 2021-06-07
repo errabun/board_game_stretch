@@ -10,8 +10,8 @@ function WishPopUp() {
 
     return (
         <main>
-            {showPopUp.added ? <p>{game.name} asdasdasdaswas added to your Wish List</p> :
-            !showPopUp.added && <p>Game Removed from Wish List</p>} 
+            {showPopUp.added && <p>{game.name} added to your Wish List</p> } 
+            {!showPopUp.added && <p>Game Removed from Wish List</p>}
         </main>
     )
 }
