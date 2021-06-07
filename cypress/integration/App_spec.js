@@ -27,6 +27,16 @@ describe('App', () => {
             "large": "https://cdn.shopify.com/s/files/1/0513/4077/1515/products/root-board-game.jpg?v=1611089915",
             "original": "https://cdn.shopify.com/s/files/1/0513/4077/1515/products/root-board-game.jpg?v=1611089915"
           },
+          "primary_publisher": {
+            "id": "jyc9bV7f9D",
+            "name": "Leder Games",
+            "url": "https://www.boardgameatlas.com/publisher/jyc9bV7f9D/leder-games"
+          },
+            "primary_designer": {
+            "id": "DJCmDFXmsh",
+            "name": "Cole Wehrle",
+            "url": "https://www.boardgameatlas.com/designer/DJCmDFXmsh/cole-wehrle"
+          },
           "description_preview": " Find adventure in this marvelous asymmetric game. Root provides limitless replay value as you and your friends explore the unique factions all wanting to rule a fantastic forest kingdom. Play as the Marquise de Cat and dominate the woods, extracting its riches and policing its inhabitants, as the Woodland Alliance, gathering supporters and coordinate revolts against the ruling regime, the Eyrie Dynasties, regaining control of the woods while keeping your squabbling court at bay, or as the Vagabond, seeking fame and fortune as you forge alliances and rivalries with the other players. Each faction has its own play style and paths to victory, providing an immersive game experience you will want to play again and again. "
         }
       ]
@@ -36,6 +46,6 @@ describe('App', () => {
 
   it('Should fetch games when page is loaded', () => {
 
-    cy.get('header').should('contain', 'Root')
+    cy.get('h1').should('have.text', 'Root')
   })
 })
