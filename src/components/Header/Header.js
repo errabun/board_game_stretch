@@ -11,7 +11,7 @@ const Header = () => {
           <Link to='/'><i className="fas fa-home"></i></Link>}
         {location.pathname.includes('/games') &&
           <Link to='/'><i className="fas fa-home"></i></Link>}
-        <a className='game-title'>Board <span className='die'>🎲 </span> Game <span className='die'>🎲 </span> Blitz </a>
+        <p className='game-title'>Board <span className='die'>🎲 </span> Game <span className='die'>🎲 </span> Blitz </p>
       </div>
       {location.pathname !== '/wishlist' &&
         <Link className="wishlist_title" to='/wishlist'><i className="far fa-heart"></i>Wishlist</Link>}

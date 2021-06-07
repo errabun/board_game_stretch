@@ -26,12 +26,12 @@ function GameDetails({id}) {
     <div>{game !== undefined &&
       <div className='game-details'>
         <header>
-          <img className='game-img' src={game.thumb_url}/>
+          <img className='game-img' src={game.thumb_url} alt={game.name} />
           <section className='header-right'>
             <h1 className='game-details-title'>{game.name}</h1>
             <span className='cost'>${game.price}</span>
-            {!game.isWished ? 
-                <button className='details-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button> 
+            {!game.isWished ?
+                <button className='details-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
                 : game.isWished && <button className='details-button' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>
             }
           </section>

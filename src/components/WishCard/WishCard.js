@@ -1,6 +1,6 @@
 import React from 'react'
 import './WishCard.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { removeWish } from '../../actions/index';
 
 function WishCard({title, price, img, id, rank}) {
@@ -8,7 +8,7 @@ function WishCard({title, price, img, id, rank}) {
     return (
         <div className="wish_card">
             <div className="spacing">
-            <img className="wish_img" src={img} />
+            <img className="wish_img" src={img} alt={title} />
                 <div>
                 <p className="title wish-text">{title}</p>
                 <p className="wish-text">Rank: {rank}</p>
