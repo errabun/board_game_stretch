@@ -38,7 +38,6 @@ function App() {
 
   return (
     <main>
-      {console.log(showPopUp)}
       <Header />
       <section>
         {showPopUp.show && <WishPopUp />}
