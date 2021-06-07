@@ -64,6 +64,7 @@
     margin: 0;
   }
   
+  .time,
   .published,
   .age {
     margin-top: 5px;
@@ -105,26 +106,18 @@
   }
 }
 
-
-@media screen and (min-width: 750px) {
-  .nav-bar {
-    height: 10em;
+@media screen and (min-width: 600px) {
+  .dashboard {
+    grid-template-columns: repeat(2,1fr);
+    gap: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+}
 
-  .fa-home {
-    margin-right: 50px;
-    font-size: 28px;
-  }
 
-  .game-title {
-    font-size: 69px;
-  }
-
-  .die {
-    font-size: 19px;
-    padding-right: 13px;
-  }
-
+@media screen and (min-width: 768px) {
   .dashboard {
     grid-template-columns: repeat(3,1fr);
     gap: 0;
@@ -138,13 +131,8 @@
     font-size: 15px;
   } 
 
-  .wishlist_title {
-    font-size: 19px;
-  }
-
-  .fa-heart {
-    font-size: 18px;
-    padding-right: 4px;
+  .remove {
+    margin-left: 2.4em;
   }
 }
 

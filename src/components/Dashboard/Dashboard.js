@@ -12,13 +12,13 @@ function Dashboard() {
   const gameImages = games.map(game => {
     return (
         <section className='game' key={game.id} style={{backgroundImage: `url(${game.image_url})`}}>
-            <Link to={`/games/${game.id}`}>
+            <Link to={`/games/${game.id}`} className='to-details-page'>
             <section className='game-hover'>
                 <h1 className='card-name'>{game.name}</h1>
                 <div className="card-spacing">
                     <div>
                         <p className='detail'>{`👥 ${game.min_players}-${game.max_players}`}</p>
-                        <p className='detail'>{`🕐 ${game.min_playtime}-${game.max_playtime}`}</p>
+                        <p className='detail time'>{`🕐 ${game.min_playtime}-${game.max_playtime}`}</p>
                     </div>
                     <div>
                         <p className='detail published'><i className="far fa-calendar-alt"></i>
@@ -37,7 +37,7 @@ function Dashboard() {
             </Link>
             {!game.isWished ? 
                 <button className='card-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button> 
-                : game.isWished && <button className='card-button' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>}
+                : game.isWished && <button className='card-button remove' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>}
         </section>
     )
   })
