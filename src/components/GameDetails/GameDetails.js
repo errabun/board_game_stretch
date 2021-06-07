@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './GameDetails.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addWish, removeWish } from '../../actions';

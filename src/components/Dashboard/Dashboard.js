@@ -1,9 +1,7 @@
 import './Dashboard.css';
-// import React, { useEffect } from 'react'
-// import { getGames } from '../../apiCalls.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { addGames, addWish, removeWish} from '../../actions';
-import {Link, Redirect } from 'react-router-dom';
+import { addWish, removeWish } from '../../actions';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
   const dispatch = useDispatch();

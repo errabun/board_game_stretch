@@ -24,10 +24,3 @@ export const addGames = (games) => {
         }
     }
 } 
-
-export const selectGame = (game) => ({
-    type: "SELECT_GAME",
-    payload: {
-        game
-    }
-})
