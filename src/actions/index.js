@@ -24,3 +24,9 @@ export const addGames = (games) => {
         }
     }
 } 
+
+export const removePopUp = () => {
+    return {
+        type: "REMOVE_POPUP"
+    }
+}
