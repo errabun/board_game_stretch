@@ -1,12 +1,15 @@
 ## Accessibility
 - The app's design is responsive with several breakpoints to accommodate various screen sizes.
 
-Main Page:
+#### Main Page:
+- Hover over board games to view additional details 
+- Add/Remove games from our wishlist 
+- Click on a game for an overview and a video on the specific game
 
- ![Home page responsive GIF](https://media.giphy.com/media/unWwXDcMZ7I3KKLVSe/giphy.gif)
 
+![Home page responsive GIF](https://media.giphy.com/media/unWwXDcMZ7I3KKLVSe/giphy.gif)
 
-User Flow:
+#### User Flow:
 
  ![GIF of wish list and board game details](https://media.giphy.com/media/jyDxhTwL1UNFylVZa5/giphy.gif)
 
