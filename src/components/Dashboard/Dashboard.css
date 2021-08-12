@@ -8,13 +8,16 @@
     text-decoration: none;
   }
 
+  .load-message {
+    height: 31em;
+  }
+
   .dashboard {
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(1 1fr);
     gap: 10px;
-    background: #2f5d62;
-    height: 31em;
+    background: #379ea4;
   }
 
   .game {
@@ -24,7 +27,7 @@
     background-position: center center;
     box-shadow: 2px 3px 6px black;
     border-radius: 8px;
-    background-color: #ffb037;
+    background-color: #f9d23a;
     background-size: 11em;
     width: 14em;
   }

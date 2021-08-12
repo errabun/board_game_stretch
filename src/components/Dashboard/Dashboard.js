@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 function Dashboard() {
   const dispatch = useDispatch()
   const games = useSelector(state => state.boardGames)
-  // const gameImages = []
-  // console.log(games)
 
   const gameImages = games.map(game => {
     return (
@@ -43,9 +41,8 @@ function Dashboard() {
   })
 
   const checkStatus = () => {
-    // console.log(gameImages.length)
     if (gameImages.length === 0) {
-      return <p>Loading board games..</p>;
+      return <p className='load-message'>Loading board games..</p>;
     } else {
       return gameImages;
     }
