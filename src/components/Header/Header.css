@@ -34,9 +34,10 @@
 
   .fa-home {
     color: white;
-    margin-right: 10px;
     font-size: 15px;
-    margin-left: 5px;
+    position: absolute;
+    right: 14px;
+    top: 10px;
   }
 
   .game-title,

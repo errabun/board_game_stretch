@@ -19,6 +19,7 @@ function App() {
   useEffect(() => {
     getGames()
       .then(data => {
+        console.log(data.games)
         dispatch(addGames(data.games))
       })
       .catch((error) => console.log(error));
