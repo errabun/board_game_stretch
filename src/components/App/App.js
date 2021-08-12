@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 import Wishlist from '../Wishlist/Wishlist';
 import Dashboard from '../Dashboard/Dashboard';
 import GameDetails from '../GameDetails/GameDetails';
@@ -60,7 +60,7 @@ function App() {
           <Redirect to='/' />
         </Switch>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   )
 
