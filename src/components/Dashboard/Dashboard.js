@@ -40,9 +40,17 @@ function Dashboard() {
     )
   })
 
+  const checkStatus = () => {
+    if (gameImages.length === 0) {
+      return <p className='load-message'>Loading board games..</p>;
+    } else {
+      return gameImages;
+    }
+  }
+
   return (
     <main className="dashboard">
-      {gameImages}
+      {checkStatus()}
     </main>
   )
 }

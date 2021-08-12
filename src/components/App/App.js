@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 import Wishlist from '../Wishlist/Wishlist';
 import Dashboard from '../Dashboard/Dashboard';
 import GameDetails from '../GameDetails/GameDetails';
@@ -19,6 +19,7 @@ function App() {
   useEffect(() => {
     getGames()
       .then(data => {
+        console.log(data.games)
         dispatch(addGames(data.games))
       })
       .catch((error) => console.log(error));
@@ -60,7 +61,7 @@ function App() {
           <Redirect to='/' />
         </Switch>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   )
 
