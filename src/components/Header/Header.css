@@ -14,11 +14,11 @@
   }
 
   .wishlist_title {
-    font-size: 15px;
+    font-size: 13px;
     color: white;
     font-family: 'Playfair Display', serif;
     position: absolute;
-    top: 0;
+    top: 3px;
     right: 0;
     width: 6em;
   }
@@ -29,7 +29,7 @@
     align-items: center;
     width: 100%;
     padding-top: 20px;
-    padding-right: 35px;
+    padding-right: 6em;
   }
 
   .fa-home {
@@ -37,18 +37,28 @@
     margin-right: 10px;
     font-size: 15px;
     margin-left: 5px;
-    /* display: none; */
+  }
+
+  .game-title,
+  .stretch-title {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
   }
 
   .game-title {
     font-size: 27px;
-    color: white;
-    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 0;
   }
 
-  .die {
-    font-size: 10px;
-    padding-right: 7px;
+  .stretch-title {
+    font-size: 45px;
+  }
+
+  .stretch-image {
+    font-size: 5px;
+    margin-bottom: 13px;
   }
 
 }
