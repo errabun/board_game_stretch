@@ -34,6 +34,9 @@ function GameDetails({id}) {
               <button className='details-button' onClick={() => dispatch(addWish(game))}>Add to wishlist</button>
               : game.isWished && <button className='details-button' onClick={() => dispatch(removeWish(game.id))}>Remove from wishlist</button>
             }
+            <form method='GET' action='http://www.amazon.com/s'>
+              <button name='k' value={game.name} className='details-button'>Find on Amazon</button>
+            </form>
           </section>
         </header>
         <p className='game-description'>{game.description_preview}</p>
